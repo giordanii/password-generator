@@ -3,9 +3,7 @@ let res = document.getElementById('res');
 let charsAll = "0123456789abcdefghijklmnopqrstuvwxyz.'!@#$%^&*()\"{}ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let charsNonSpecial = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let password = '';
-let special = '';
-let check = document.querySelector('input[name="rate"]:checked').value;
-
+let check = document.querySelector('input[name="special"]:checked');
 
 function checkLength() {
     if (length.value.length == '') {
@@ -25,21 +23,13 @@ function checkSpecial() {
 function generate() {
     checkLength();
     checkSpecial();
-    res.innerHTML = ''
+    res.innerHTML = '' 
     
-    if (special == true){
-        for (let c = 0; c <= length; c++) {
-        let randomic = Math.floor(Math.random() * charsAll.length);
-        password += chars.substring(randomic, randomic +1);
+    for (let c = 0; c < length; c++) {
+    let randomic = Math.floor(Math.random() * charsAll.length);
+    password += charsAll.substring(randomic, randomic + 1);
     }
-    res.innerHTML = `The generated password is ${password}`
-    } else if (special == false) {
-        for (let c = 0; c <= length; c++) {
-            let randomic = Math.floor(Math.random() * charsNonSpecial.length);
-            password += chars.substring(randomic, randomic +1);
-        }
-        res.innerHTML = `The generated password is ${password}`
-    }
-
+    res.innerHTML += `The generated password is ${password}`
+    console.log(check)
 }
         
