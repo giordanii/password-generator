@@ -1,5 +1,4 @@
 let length = document.querySelector('input#pass_length');
-let res = document.getElementById('res');
 let chars = "0123456789abcdefghijklmnopqrstuvwxyz.'!@#$%^&*()\"{}ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let password = '';
 var copyText = document.getElementById("password");
@@ -14,8 +13,8 @@ function checkLength() {
 
 function generate() {
     checkLength();
-    res.innerHTML = '' 
-    
+    password = ''
+    document.getElementById("password").value = '';
     for (let c = 0; c < length; c++) {
     let randomic = Math.floor(Math.random() * chars.length);
     password += chars.substring(randomic, randomic + 1);
