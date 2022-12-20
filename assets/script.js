@@ -13,8 +13,6 @@ function checkLength() {
 
 function generate() {
     checkLength();
-    password = ''
-    document.getElementById("password").value = '';
     for (let c = 0; c < length; c++) {
     let randomic = Math.floor(Math.random() * chars.length);
     password += chars.substring(randomic, randomic + 1);

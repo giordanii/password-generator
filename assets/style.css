@@ -47,6 +47,8 @@ button {
     background-color: transparent;
     border-radius: 8px;
     justify-content: space-around;
+    cursor: pointer;
+    font-weight: bolder;
 }
 
 footer {
