@@ -13,6 +13,7 @@ body {
 }
 
 header {
+    margin-top: 35px;
     font-family: 'Secular One', sans-serif;
     font-size: 3em;
     font-weight: bolder;
